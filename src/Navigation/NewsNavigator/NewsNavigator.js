@@ -31,12 +31,16 @@ export const NewsNavigator = () => {
             iconName = focused
               ? "ios-information-circle"
               : "ios-information-circle-outline";
+            size = focused ? 25 : 30;
           } else if (route.name === "Settings") {
             iconName = focused ? "ios-list" : "ios-list-outline";
+            size = focused ? 25 : 30;
           }
 
           // You can return any component that you like here!
-          return <MaterialCommunityIcons name={iconName} size={size} color={color} />;
+          return (
+            <MaterialCommunityIcons name={iconName} size={size} color={color} />
+          );
         },
         tabBarActiveTintColor: "tomato",
         tabBarInactiveTintColor: "gray",
