@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
 
-export const News = () => {
+export const Tech = () => {
     return (
         <View>
             
@@ -10,4 +10,5 @@ export const News = () => {
 }
 
 const styles = StyleSheet.create({})
+
 

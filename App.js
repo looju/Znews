@@ -17,8 +17,6 @@ import {
 
 const Stack = createStackNavigator();
 export default function App() {
-
-  
   let [fontsLoaded] = useFonts({
     Nunito_400Regular,
     Lato_400Regular,
@@ -43,7 +41,11 @@ export default function App() {
             component={Setup}
             options={{ headerShown: false }}
           />
-          <Stack.Screen name="NewsNavigator" component={NewsNavigator} />
+          <Stack.Screen
+            name="NewsNavigator"
+            component={NewsNavigator}
+            options={{ headerShown: false }}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     );
