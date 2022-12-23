@@ -1,5 +1,6 @@
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { SettingsNavigator } from "../SettingsNavigator'/SettingsNavigator";
 import { World } from "../../Features/News/Screen/World";
 import { Health } from "../../Features/News/Screen/Health";
 import { Sport } from "../../Features/News/Screen/Sport";
@@ -18,17 +19,25 @@ export const NewsNavigator = () => {
         tabBarIcon: ({ focused, color, size }) => {
           let iconName;
 
-          if (route.name === "Home") {
-            iconName = focused
-              ? "ios-information-circle"
-              : "ios-information-circle-outline";
+          if (route.name === "World") {
+            iconName =  "earth";
             size = focused ? 30 : 25;
-          } else if (route.name === "Settings") {
-            iconName = focused ? "ios-list" : "ios-list-outline";
+          } else if (route.name === "Business") {
+            iconName ="handshake-outline";
             size = focused ? 30 : 25;
           }
-
-          // You can return any component that you like here!
+          else if (route.name === "Tech") {
+            iconName ="laptop";
+            size = focused ? 30 : 25;
+          }
+          else if (route.name === "Sport") {
+            iconName ="soccer";
+            size = focused ? 30 : 25;
+          }
+          else if (route.name === "Health") {
+            iconName ="run";
+            size = focused ? 30 : 25;
+          }
           return (
             <MaterialCommunityIcons name={iconName} size={size} color={color} />
           );
@@ -37,7 +46,7 @@ export const NewsNavigator = () => {
         tabBarInactiveTintColor: "gray",
       })}
     >
-      <Tab.Screen name="World" component={World} />
+      <Tab.Screen name="World" component={SettingsNavigator} />
       <Tab.Screen name="Business" component={Business} />
       <Tab.Screen name="Tech" component={Tech} />
       <Tab.Screen name="Sport" component={Sport} />
@@ -45,3 +54,5 @@ export const NewsNavigator = () => {
     </Tab.Navigator>
   );
 };
+
+
