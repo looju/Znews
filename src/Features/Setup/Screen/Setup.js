@@ -8,10 +8,10 @@ export const Setup = ({ navigation }) => {
   useEffect(() => {
     setTimeout(() => {
       navigation.replace("NewsNavigator");
-    }, 6000);
+    }, 3500);
   }, []);
 
-  setTimeout(changeState, 3000);
+  setTimeout(changeState, 1500);
 
   function changeState() {
     setLoading(!loading);
