@@ -16,12 +16,11 @@ import {
 } from "@expo-google-fonts/dev";
 import { ThemeContext } from "../../Services/Theme";
 
-
 const Tab = createMaterialBottomTabNavigator();
 
-export const NewsNavigator = ({route}) => {
+export const NewsNavigator = ({ route }) => {
   const { theme } = useContext(ThemeContext);
-  const {country}=route.params
+  const { country } = route.params;
 
   let [fontsLoaded] = useFonts({
     Nunito_400Regular,
@@ -37,7 +36,6 @@ export const NewsNavigator = ({route}) => {
     return (
       <Tab.Navigator
         screenOptions={({ route }) => ({
-          
           tabBarIcon: ({ focused, color, size }) => {
             let iconName;
 
@@ -73,17 +71,36 @@ export const NewsNavigator = ({route}) => {
           headerTitle: {
             color: theme == "light" ? "#000" : "#fff",
           },
-       
-        tabBarColor:theme == "light" ? "#fff" : "#000",
-        })}
 
+          tabBarColor: theme == "light" ? "#fff" : "#000",
+        })}
         shifting
       >
-        {/* <Tab.Screen name="World" component={SettingsNavigator} options={{tabBarColor:"#0000FF"}}/> */}
-        <Tab.Screen name="Business" component={()=><Business country={country}/>} options={{tabBarColor:"#964B00"}}/>
-        <Tab.Screen name="Tech" component={()=><Tech country={country}/>} options={{tabBarColor:"#ff0"}}/>
-        <Tab.Screen name="Sport" component={()=><Sport country={country}/>} options={{tabBarColor:"#FFA500"}}/>
-        <Tab.Screen name="Health" component={()=><Health country={country}/>} options={{tabBarColor:"#00FF00"}}/>
+        <Tab.Screen
+          name="World"
+          component={SettingsNavigator}
+          options={{ tabBarColor: "#0000FF" }}
+        />
+        <Tab.Screen
+          name="Business"
+          component={() => <Business country={country} />}
+          options={{ tabBarColor: "#964B00" }}
+        />
+        <Tab.Screen
+          name="Tech"
+          component={() => <Tech country={country} />}
+          options={{ tabBarColor: "#ff0" }}
+        />
+        <Tab.Screen
+          name="Sport"
+          component={() => <Sport country={country} />}
+          options={{ tabBarColor: "#FFA500" }}
+        />
+        <Tab.Screen
+          name="Health"
+          component={() => <Health country={country} />}
+          options={{ tabBarColor: "#00FF00" }}
+        />
       </Tab.Navigator>
     );
   }

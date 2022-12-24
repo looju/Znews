@@ -44,7 +44,7 @@ export const SettingsNavigator = () => {
     >
       <Drawer.Screen
         name="WorldNews"
-        component={World}
+        component={()=><World country={country}/> }
         options={{
           headerTitle: {
             color: theme == "light" ? "#000" : "#fff",
