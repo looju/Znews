@@ -15,12 +15,13 @@ import { FadeInView } from "../../Animation/Animation";
 import { Services } from "../../../Services/Services";
 import { ThemeContext } from "../../../Services/Theme";
 
-export const Tech = () => {
+export const Tech = ({country}) => {
   const [newsData, setNewsData] = useState([]);
   const { theme } = useContext(ThemeContext);
 
+
   useEffect(() => {
-    Services("technology")
+    Services("technology",`${country}`)
       .then((data) => {
         setNewsData(data);
       })

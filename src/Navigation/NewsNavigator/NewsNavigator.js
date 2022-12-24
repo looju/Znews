@@ -19,9 +19,9 @@ import { ThemeContext } from "../../Services/Theme";
 
 const Tab = createMaterialBottomTabNavigator();
 
-export const NewsNavigator = () => {
-
+export const NewsNavigator = ({route}) => {
   const { theme } = useContext(ThemeContext);
+  const {country}=route.params
 
   let [fontsLoaded] = useFonts({
     Nunito_400Regular,
@@ -79,11 +79,11 @@ export const NewsNavigator = () => {
 
         shifting
       >
-        <Tab.Screen name="World" component={SettingsNavigator} options={{tabBarColor:"#0000FF"}}/>
-        <Tab.Screen name="Business" component={Business} options={{tabBarColor:"#964B00"}}/>
-        <Tab.Screen name="Tech" component={Tech} options={{tabBarColor:"#ff0"}}/>
-        <Tab.Screen name="Sport" component={Sport} options={{tabBarColor:"#FFA500"}}/>
-        <Tab.Screen name="Health" component={Health} options={{tabBarColor:"#00FF00"}}/>
+        {/* <Tab.Screen name="World" component={SettingsNavigator} options={{tabBarColor:"#0000FF"}}/> */}
+        <Tab.Screen name="Business" component={()=><Business country={country}/>} options={{tabBarColor:"#964B00"}}/>
+        <Tab.Screen name="Tech" component={()=><Tech country={country}/>} options={{tabBarColor:"#ff0"}}/>
+        <Tab.Screen name="Sport" component={()=><Sport country={country}/>} options={{tabBarColor:"#FFA500"}}/>
+        <Tab.Screen name="Health" component={()=><Health country={country}/>} options={{tabBarColor:"#00FF00"}}/>
       </Tab.Navigator>
     );
   }

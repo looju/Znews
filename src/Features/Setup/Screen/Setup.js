@@ -75,12 +75,11 @@ export const Setup = ({ navigation }) => {
         >
           <View
             style={{
-             
               width: 300,
               maxHeight: 300,
             }}
           >
-            <ScrollView style={{height:350, backgroundColor:"#000"}}>
+            <ScrollView style={{ height: 350, backgroundColor: "none" }}>
               <List.Accordion
                 title="All countries"
                 left={(props) => <List.Icon {...props} icon="earth" />}
@@ -89,59 +88,146 @@ export const Setup = ({ navigation }) => {
               >
                 <List.Item
                   title="Arab Emirates"
-                  left={(props) => <List.Icon {...props} icon="earth-arrow-right" color="#ff0" />}
+                  left={(props) => (
+                    <List.Icon
+                      {...props}
+                      icon="earth-arrow-right"
+                      color="#ff0"
+                    />
+                  )}
+                  onPress={() =>
+                    navigation.navigate("NewsNavigator", {country:"ae"})
+                  }
                 />
                 <List.Item
                   title="Belgium"
-                  left={(props) => <List.Icon {...props} icon="earth-arrow-right" color="#ff0" />}
+                  left={(props) => (
+                    <List.Icon
+                      {...props}
+                      icon="earth-arrow-right"
+                      color="#ff0"
+                    />
+                  )}
                 />
                 <List.Item
                   title="Bulgaria"
-                  left={(props) => <List.Icon {...props} icon="earth-arrow-right" color="#ff0" />}
+                  left={(props) => (
+                    <List.Icon
+                      {...props}
+                      icon="earth-arrow-right"
+                      color="#ff0"
+                    />
+                  )}
                 />
                 <List.Item
                   title="Canada"
-                  left={(props) => <List.Icon {...props} icon="earth-arrow-right" color="#ff0" />}
+                  left={(props) => (
+                    <List.Icon
+                      {...props}
+                      icon="earth-arrow-right"
+                      color="#ff0"
+                    />
+                  )}
                 />
                 <List.Item
                   title="China"
-                  left={(props) => <List.Icon {...props} icon="earth-arrow-right" color="#ff0" />}
+                  left={(props) => (
+                    <List.Icon
+                      {...props}
+                      icon="earth-arrow-right"
+                      color="#ff0"
+                    />
+                  )}
                 />
                 <List.Item
                   title="Colombia"
-                  left={(props) => <List.Icon {...props} icon="earth-arrow-right" color="#ff0" />}
+                  left={(props) => (
+                    <List.Icon
+                      {...props}
+                      icon="earth-arrow-right"
+                      color="#ff0"
+                    />
+                  )}
                 />
                 <List.Item
                   title="Egypt"
-                  left={(props) => <List.Icon {...props} icon="earth-arrow-right" color="#ff0" />}
+                  left={(props) => (
+                    <List.Icon
+                      {...props}
+                      icon="earth-arrow-right"
+                      color="#ff0"
+                    />
+                  )}
                 />
                 <List.Item
                   title="France"
-                  left={(props) => <List.Icon {...props} icon="earth-arrow-right" color="#ff0" />}
+                  left={(props) => (
+                    <List.Icon
+                      {...props}
+                      icon="earth-arrow-right"
+                      color="#ff0"
+                    />
+                  )}
                 />
                 <List.Item
                   title="Greece"
-                  left={(props) => <List.Icon {...props} icon="earth-arrow-right" color="#ff0" />} //gr
+                  left={(props) => (
+                    <List.Icon
+                      {...props}
+                      icon="earth-arrow-right"
+                      color="#ff0"
+                    />
+                  )} //gr
                 />
                 <List.Item
                   title="Japan"
-                  left={(props) => <List.Icon {...props} icon="earth-arrow-right" color="#ff0" />} //jp
+                  left={(props) => (
+                    <List.Icon
+                      {...props}
+                      icon="earth-arrow-right"
+                      color="#ff0"
+                    />
+                  )} //jp
                 />
                 <List.Item
                   title="Nigeria"
-                  left={(props) => <List.Icon {...props} icon="earth-arrow-right" color="#ff0" />} //ng
+                  left={(props) => (
+                    <List.Icon
+                      {...props}
+                      icon="earth-arrow-right"
+                      color="#ff0"
+                    />
+                  )} //ng
                 />
                 <List.Item
                   title="Portugal"
-                  left={(props) => <List.Icon {...props} icon="earth-arrow-right" color="#ff0" />} //pt
+                  left={(props) => (
+                    <List.Icon
+                      {...props}
+                      icon="earth-arrow-right"
+                      color="#ff0"
+                    />
+                  )} //pt
                 />
-                 <List.Item
+                <List.Item
                   title="United Kingdom"
-                  left={(props) => <List.Icon {...props} icon="earth-arrow-right" color="#ff0" />} //gb
+                  left={(props) => (
+                    <List.Icon
+                      {...props}
+                      icon="earth-arrow-right"
+                      color="#ff0"
+                    />
+                  )} //gb
                 />
                 <List.Item
                   title="United States"
-                  left={(props) => <List.Icon {...props} icon="earth-arrow-right" color="#ff0" />} //us
+                  left={(props) => (
+                    <List.Icon
+                      {...props}
+                      icon="earth-arrow-right"
+                      color="#ff0"
+                    />
+                  )} //us
                 />
               </List.Accordion>
             </ScrollView>
