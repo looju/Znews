@@ -25,7 +25,7 @@ export const World = () => {
         setNewsData(data);
       })
       .catch((error) => {
-        console.log("Erro fetching general data at World.js: " + error);
+        console.log("Error fetching general data at World.js: " + error);
       });
   }, []);
 

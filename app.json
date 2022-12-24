@@ -24,10 +24,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#000"
-      }
+      },
+      "package": "com.loju.Znews"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "0bc4a904-0504-4f82-9d72-57b12b5daa09"
+      }
     }
   }
 }

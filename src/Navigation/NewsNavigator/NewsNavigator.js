@@ -74,7 +74,7 @@ export const NewsNavigator = () => {
             color: theme == "light" ? "#000" : "#fff",
           },
        
-
+        tabBarColor:theme == "light" ? "#fff" : "#000",
         })}
 
         shifting
