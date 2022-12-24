@@ -23,7 +23,7 @@ export const Tech = () => {
         setNewsData(data);
       })
       .catch((error) => {
-        console.log("Erro fetching general data at World.js: " + error);
+        console.log("Erro fetching general data at Tech.js: " + error);
       });
   }, []);
 

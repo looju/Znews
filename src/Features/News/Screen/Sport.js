@@ -23,7 +23,7 @@ export const Sport = () => {
         setNewsData(data);
       })
       .catch((error) => {
-        console.log("Erro fetching general data at World.js: " + error);
+        console.log("Erro fetching general data at Sport.js: " + error);
       });
   }, []);
 
@@ -68,7 +68,7 @@ export const Sport = () => {
             <FlatList
               data={newsData}
               renderItem={renderItem}
-              keyExtractor={(item) => item.publishedAt}
+              keyExtractor={(item) => item.url}
               refreshing
             ></FlatList>
           </FadeInView>
