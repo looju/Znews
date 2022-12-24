@@ -6,10 +6,16 @@ import {
   Text,
   Image,
   TouchableOpacity,
-  Linking
+  Linking,
 } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import moment from "moment";
+import ContentLoader, {
+  Rect,
+  Circle,
+  Facebook,
+  Instagram,
+} from "react-content-loader/native";
 import { Services } from "../../../Services/Services";
 
 export const World = () => {
@@ -45,25 +51,52 @@ export const World = () => {
       <View style={styles.detailView}>
         <Text style={styles.detailStyle}>{item.title}</Text>
       </View>
-      <TouchableOpacity onPress={()=>{
-        Linking.openURL(`${item.url}`)
-      }}>
+      <TouchableOpacity
+        onPress={() => {
+          Linking.openURL(`${item.url}`);
+        }}
+      >
         <View style={styles.buttonLink}>
           <Text style={styles.dateStyle}>Read more </Text>
-          <MaterialCommunityIcons name="newspaper" size={20}/>
+          <MaterialCommunityIcons name="newspaper" size={20} />
         </View>
       </TouchableOpacity>
     </View>
   );
 
+
   return (
-    <View style={styles.container}>
-      <FlatList
-        data={newsData}
-        renderItem={renderItem}
-        keyExtractor={(item) => item.publishedAt}
-        refreshing
-      ></FlatList>
+    <View style={{ flex: 1, backgroundColor: "#ff0" }}>
+      {!newsData.length > 1 ? (
+        <View style={styles.container}>
+          <FlatList
+            data={newsData}
+            renderItem={renderItem}
+            keyExtractor={(item) => item.publishedAt}
+            refreshing
+          ></FlatList>
+        </View>
+      ) : (
+        <ContentLoader 
+        speed={2}
+        width={400}
+        height={500}
+        viewBox="0 0 400 500"
+        backgroundColor="#f3f3f3"
+        foregroundColor="#e8ceda"
+    
+      >
+        <Rect x="11" y="183" rx="2" ry="2" width="354" height="19" /> 
+        <Rect x="12" y="205" rx="2" ry="2" width="129" height="6" /> 
+        <Rect x="99" y="11" rx="2" ry="2" width="249" height="165" /> 
+        <Rect x="100" y="236" rx="2" ry="2" width="244" height="161" /> 
+        <Rect x="16" y="403" rx="2" ry="2" width="356" height="19" /> 
+        <Rect x="102" y="467" rx="2" ry="2" width="245" height="113" /> 
+        <Rect x="15" y="439" rx="2" ry="2" width="360" height="16" /> 
+        <Rect x="18" y="428" rx="2" ry="2" width="129" height="5" /> 
+        <Rect x="13" y="214" rx="2" ry="2" width="360" height="16" />
+      </ContentLoader>
+      )}
     </View>
   );
 };
@@ -105,7 +138,7 @@ const styles = StyleSheet.create({
     marginTop: 2,
   },
   buttonLink: {
-   flexDirection:"row",
+    flexDirection: "row",
     marginBottom: 10,
   },
 });
