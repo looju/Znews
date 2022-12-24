@@ -108,6 +108,9 @@ export const Setup = ({ navigation }) => {
                       color="#ff0"
                     />
                   )}
+                  onPress={() =>
+                    navigation.navigate("NewsNavigator", {country:"be"})
+                  } 
                 />
                 <List.Item
                   title="Bulgaria"
@@ -118,6 +121,9 @@ export const Setup = ({ navigation }) => {
                       color="#ff0"
                     />
                   )}
+                  onPress={() =>
+                    navigation.navigate("NewsNavigator", {country:"bg"})
+                  }
                 />
                 <List.Item
                   title="Canada"
@@ -128,6 +134,9 @@ export const Setup = ({ navigation }) => {
                       color="#ff0"
                     />
                   )}
+                  onPress={() =>
+                    navigation.navigate("NewsNavigator", {country:"ca"})
+                  }
                 />
                 <List.Item
                   title="China"
@@ -138,6 +147,9 @@ export const Setup = ({ navigation }) => {
                       color="#ff0"
                     />
                   )}
+                  onPress={() =>
+                    navigation.navigate("NewsNavigator", {country:"cn"})
+                  }
                 />
                 <List.Item
                   title="Colombia"
@@ -148,6 +160,9 @@ export const Setup = ({ navigation }) => {
                       color="#ff0"
                     />
                   )}
+                  onPress={() =>
+                    navigation.navigate("NewsNavigator", {country:"co"})
+                  }
                 />
                 <List.Item
                   title="Egypt"
@@ -158,6 +173,9 @@ export const Setup = ({ navigation }) => {
                       color="#ff0"
                     />
                   )}
+                  onPress={() =>
+                    navigation.navigate("NewsNavigator", {country:"eg"})
+                  }
                 />
                 <List.Item
                   title="France"
@@ -168,6 +186,9 @@ export const Setup = ({ navigation }) => {
                       color="#ff0"
                     />
                   )}
+                  onPress={() =>
+                    navigation.navigate("NewsNavigator", {country:"fr"})
+                  }
                 />
                 <List.Item
                   title="Greece"
@@ -177,7 +198,11 @@ export const Setup = ({ navigation }) => {
                       icon="earth-arrow-right"
                       color="#ff0"
                     />
-                  )} //gr
+                   
+                  )} 
+                  onPress={() =>
+                    navigation.navigate("NewsNavigator", {country:"gr"})
+                  }
                 />
                 <List.Item
                   title="Japan"
@@ -187,7 +212,10 @@ export const Setup = ({ navigation }) => {
                       icon="earth-arrow-right"
                       color="#ff0"
                     />
-                  )} //jp
+                  )} 
+                  onPress={() =>
+                    navigation.navigate("NewsNavigator", {country:"jp"})
+                  }
                 />
                 <List.Item
                   title="Nigeria"
@@ -197,7 +225,10 @@ export const Setup = ({ navigation }) => {
                       icon="earth-arrow-right"
                       color="#ff0"
                     />
-                  )} //ng
+                  )} 
+                  onPress={() =>
+                    navigation.navigate("NewsNavigator", {country:"ng"})
+                  }
                 />
                 <List.Item
                   title="Portugal"
@@ -207,7 +238,10 @@ export const Setup = ({ navigation }) => {
                       icon="earth-arrow-right"
                       color="#ff0"
                     />
-                  )} //pt
+                  )} 
+                  onPress={() =>
+                    navigation.navigate("NewsNavigator", {country:"pt"})
+                  }
                 />
                 <List.Item
                   title="United Kingdom"
@@ -217,7 +251,10 @@ export const Setup = ({ navigation }) => {
                       icon="earth-arrow-right"
                       color="#ff0"
                     />
-                  )} //gb
+                  )} 
+                  onPress={() =>
+                    navigation.navigate("NewsNavigator", {country:"gb"})
+                  }
                 />
                 <List.Item
                   title="United States"
@@ -227,7 +264,10 @@ export const Setup = ({ navigation }) => {
                       icon="earth-arrow-right"
                       color="#ff0"
                     />
-                  )} //us
+                  )} 
+                  onPress={() =>
+                    navigation.navigate("NewsNavigator", {country:"us"})
+                  }
                 />
               </List.Accordion>
             </ScrollView>
