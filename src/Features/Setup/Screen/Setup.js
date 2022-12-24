@@ -183,7 +183,7 @@ export const Setup = ({ navigation }) => {
                     <List.Icon
                       {...props}
                       icon="earth-arrow-right"
-                      color="#ff0"
+                      color="#B565A7"
                     />
                   )}
                   onPress={() =>
@@ -196,7 +196,7 @@ export const Setup = ({ navigation }) => {
                     <List.Icon
                       {...props}
                       icon="earth-arrow-right"
-                      color="#ff0"
+                      color="#955251"
                     />
                    
                   )} 
@@ -210,7 +210,7 @@ export const Setup = ({ navigation }) => {
                     <List.Icon
                       {...props}
                       icon="earth-arrow-right"
-                      color="#ff0"
+                      color="#F7CAC9"
                     />
                   )} 
                   onPress={() =>
@@ -223,7 +223,7 @@ export const Setup = ({ navigation }) => {
                     <List.Icon
                       {...props}
                       icon="earth-arrow-right"
-                      color="#ff0"
+                      color="#88B04B"
                     />
                   )} 
                   onPress={() =>
@@ -236,7 +236,7 @@ export const Setup = ({ navigation }) => {
                     <List.Icon
                       {...props}
                       icon="earth-arrow-right"
-                      color="#ff0"
+                      color=" #6B5B95"
                     />
                   )} 
                   onPress={() =>
@@ -249,7 +249,7 @@ export const Setup = ({ navigation }) => {
                     <List.Icon
                       {...props}
                       icon="earth-arrow-right"
-                      color="#ff0"
+                      color="#34568B"
                     />
                   )} 
                   onPress={() =>
@@ -262,7 +262,7 @@ export const Setup = ({ navigation }) => {
                     <List.Icon
                       {...props}
                       icon="earth-arrow-right"
-                      color="#ff0"
+                      color="#34568B"
                     />
                   )} 
                   onPress={() =>
