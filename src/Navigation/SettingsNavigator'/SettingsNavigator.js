@@ -19,11 +19,11 @@ export const SettingsNavigator = () => {
           if (route.name === "WorldNews") {
             iconName = "earth";
             size = focused ? 30 : 25;
-            color=theme=="light"?"#fff":"#000"
+            color=theme=="light"?"#000":"#fff"
           } else if (route.name === "Settings") {
             iconName = "cog-outline";
             size = focused ? 30 : 25;
-            color=theme=="light"?"#fff":"#000"
+            color=theme=="light"?"#000":"#fff"
           }
           return <MaterialCommunityIcons name={iconName} size={size} color={color}/>;
         },
