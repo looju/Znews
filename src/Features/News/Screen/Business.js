@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import {
   View,
   StyleSheet,
@@ -13,9 +13,11 @@ import moment from "moment";
 import ContentLoader, { Rect } from "react-content-loader/native";
 import { FadeInView } from "../../Animation/Animation";
 import { Services } from "../../../Services/Services";
+import { ThemeContext } from "../../../Services/Theme";
 
 export const Business = () => {
   const [newsData, setNewsData] = useState([]);
+  const { theme } = useContext(ThemeContext);
 
   useEffect(() => {
     Services("business")
@@ -37,15 +39,15 @@ export const Business = () => {
         />
       </View>
       <View style={styles.textView}>
-        <Text style={styles.textStyle}>{item.description}</Text>
+        <Text style={theme=="light"?styles.textStyle:styles.textStyleDark}>{item.description}</Text>
       </View>
       <View style={styles.dateView}>
-        <Text style={styles.dateStyle}>
+        <Text style={theme=="light"?styles.dateStyle:styles.dateStyleDark}>
           {moment(item.publishedAt).format("LLLL")}
         </Text>
       </View>
       <View style={styles.detailView}>
-        <Text style={styles.detailStyle}>{item.title}</Text>
+        <Text style={theme=="light"?styles.detailStyle:styles.detailStyleDark}>{item.title}</Text>
       </View>
       <TouchableOpacity
         onPress={() => {
@@ -53,17 +55,17 @@ export const Business = () => {
         }}
       >
         <View style={styles.buttonLink}>
-          <Text style={styles.dateStyle}>Read more </Text>
-          <MaterialCommunityIcons name="newspaper" size={20} />
+          <Text style={theme=="light"?styles.dateStyle:styles.dateStyleDark}>Read more </Text>
+          <MaterialCommunityIcons name="newspaper" size={20} color={theme=="light"?"#000":"#fff"}/>
         </View>
       </TouchableOpacity>
     </View>
   );
 
   return (
-    <View style={{ flex: 1}}>
+    <View style={{ flex: 1 }}>
       {newsData.length > 1 ? (
-        <View style={styles.container}>
+        <View style={theme=="light"?styles.container:styles.containerDark}>
           <FadeInView duration={2500}>
             <FlatList
               data={newsData}
@@ -100,6 +102,12 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+  containerDark:{
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor:"#000"
+  },
   imageView: {
     marginVertical: 8,
     width: 400,
@@ -115,10 +123,22 @@ const styles = StyleSheet.create({
   dateView: {
     marginTop: 2,
   },
+  dateStyle:{
+    color:'#000'
+  },
+  dateStyleDark:{
+    color:'#fff'
+  },
   textStyle: {
     fontSize: 20,
     fontFamily: "Lato_400Regular",
     fontWeight: "bold",
+  },
+  textStyleDark:{
+    fontSize: 20,
+    fontFamily: "Lato_400Regular",
+    fontWeight: "bold",
+    color:"white"
   },
   detailView: {
     marginVertical: 10,
@@ -126,6 +146,11 @@ const styles = StyleSheet.create({
   detailStyle: {
     fontSize: 20,
     fontFamily: "Griffy_400Regular",
+  },
+  detailStyleDark:{
+    fontSize: 20,
+    fontFamily: "Griffy_400Regular",
+    color:"#fff"
   },
   readMoreView: {
     marginTop: 2,
