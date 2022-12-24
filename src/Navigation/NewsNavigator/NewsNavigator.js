@@ -1,3 +1,4 @@
+import React, { useContext } from "react";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { SettingsNavigator } from "../SettingsNavigator'/SettingsNavigator";
@@ -13,11 +14,15 @@ import {
   Griffy_400Regular,
   Tangerine_400Regular,
 } from "@expo-google-fonts/dev";
+import { ThemeContext } from "../../Services/Theme";
 
 
 const Tab = createMaterialBottomTabNavigator();
 
 export const NewsNavigator = () => {
+
+  const { theme } = useContext(ThemeContext);
+
   let [fontsLoaded] = useFonts({
     Nunito_400Regular,
     Lato_400Regular,
@@ -59,6 +64,14 @@ export const NewsNavigator = () => {
                 color={color}
               />
             );
+          },
+          headerStyle: {
+            backgroundColor: theme == "light" ? "#fff" : "#000",
+          },
+          headerTitleAlign: "center",
+          headerTintColor: theme == "light" ? "#000" : "#fff",
+          headerTitle: {
+            color: theme == "light" ? "#000" : "#fff",
           },
        
 

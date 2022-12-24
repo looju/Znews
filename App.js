@@ -1,6 +1,6 @@
 import "react-native-gesture-handler";
 import * as React from "react";
-import { StatusBar } from "expo-status-bar";
+import { Context } from "./src/Services/Theme";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NewsNavigator } from "./src/Navigation/NewsNavigator/NewsNavigator";
@@ -29,25 +29,27 @@ export default function App() {
     return null;
   } else {
     return (
-      <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen
-            name="Carousel"
-            component={Carousel}
-            options={{ headerShown: false }}
-          />
-          <Stack.Screen
-            name="Setup"
-            component={Setup}
-            options={{ headerShown: false }}
-          />
-          <Stack.Screen
-            name="NewsNavigator"
-            component={NewsNavigator}
-            options={{ headerShown: false }}
-          />
-        </Stack.Navigator>
-      </NavigationContainer>
+      <Context>
+        <NavigationContainer>
+          <Stack.Navigator>
+            <Stack.Screen
+              name="Carousel"
+              component={Carousel}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="Setup"
+              component={Setup}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="NewsNavigator"
+              component={NewsNavigator}
+              options={{ headerShown: false }}
+            />
+          </Stack.Navigator>
+        </NavigationContainer>
+      </Context>
     );
   }
 }
