@@ -76,21 +76,18 @@ export const World = () => {
       ) : (
         <ContentLoader
           speed={2}
-          width={400}
+          width={500}
           height={500}
-          viewBox="0 0 400 500"
+          viewBox="0 0 500 500"
           backgroundColor="#f3f3f3"
           foregroundColor="#e8ceda"
         >
-          <Rect x="11" y="183" rx="2" ry="2" width="354" height="19" />
-          <Rect x="12" y="205" rx="2" ry="2" width="129" height="6" />
-          <Rect x="99" y="11" rx="2" ry="2" width="249" height="165" />
-          <Rect x="100" y="236" rx="2" ry="2" width="244" height="161" />
-          <Rect x="16" y="403" rx="2" ry="2" width="356" height="19" />
-          <Rect x="102" y="467" rx="2" ry="2" width="245" height="113" />
-          <Rect x="15" y="439" rx="2" ry="2" width="360" height="16" />
+          <Rect x="14" y="176" rx="2" ry="2" width="368" height="42" />
+          <Rect x="12" y="4" rx="2" ry="2" width="493" height="165" />
+          <Rect x="16" y="239" rx="2" ry="2" width="478" height="166" />
+          <Rect x="13" y="462" rx="2" ry="2" width="477" height="113" />
+          <Rect x="15" y="414" rx="2" ry="2" width="360" height="42" />
           <Rect x="18" y="428" rx="2" ry="2" width="129" height="5" />
-          <Rect x="13" y="214" rx="2" ry="2" width="360" height="16" />
         </ContentLoader>
       )}
     </View>
