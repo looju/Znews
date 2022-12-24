@@ -67,7 +67,7 @@ export const World = () => {
 
   return (
     <View style={{ flex: 1, backgroundColor: "#ff0" }}>
-      {!newsData.length > 1 ? (
+      {newsData.length > 1 ? (
         <View style={styles.container}>
           <FlatList
             data={newsData}
