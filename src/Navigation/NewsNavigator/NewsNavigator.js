@@ -13,6 +13,7 @@ import {
   Griffy_400Regular,
   Tangerine_400Regular,
 } from "@expo-google-fonts/dev";
+import { color } from "react-native-reanimated";
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -31,6 +32,7 @@ export const NewsNavigator = () => {
     return (
       <Tab.Navigator
         screenOptions={({ route }) => ({
+          
           tabBarIcon: ({ focused, color, size }) => {
             let iconName;
 
@@ -58,15 +60,17 @@ export const NewsNavigator = () => {
               />
             );
           },
-          tabBarActiveTintColor: "tomato",
-          tabBarInactiveTintColor: "gray",
+       
+
         })}
+
+        shifting
       >
-        <Tab.Screen name="World" component={SettingsNavigator} />
-        <Tab.Screen name="Business" component={Business} />
-        <Tab.Screen name="Tech" component={Tech} />
-        <Tab.Screen name="Sport" component={Sport} />
-        <Tab.Screen name="Health" component={Health} />
+        <Tab.Screen name="World" component={SettingsNavigator} options={{tabBarColor:"#0000FF"}}/>
+        <Tab.Screen name="Business" component={Business} options={{tabBarColor:"#964B00"}}/>
+        <Tab.Screen name="Tech" component={Tech} options={{tabBarColor:"#ff0"}}/>
+        <Tab.Screen name="Sport" component={Sport} options={{tabBarColor:"#FFA500"}}/>
+        <Tab.Screen name="Health" component={Health} options={{tabBarColor:"#00FF00"}}/>
       </Tab.Navigator>
     );
   }

@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import {
   View,
   StyleSheet,
-  ScrollView,
   FlatList,
   Text,
   Image,
+  TouchableOpacity,
 } from "react-native";
 import moment from "moment";
 import { Services } from "../../../Services/Services";
@@ -41,10 +41,11 @@ export const World = () => {
         </Text>
       </View>
       <View style={styles.detailView}>
-        <Text style={styles.detailStyle}>
-        {item.content}
-        </Text>
+        <Text style={styles.detailStyle}>{item.title}</Text>
       </View>
+       <TouchableOpacity>
+        
+        </TouchableOpacity>
     </View>
   );
 
@@ -92,5 +93,8 @@ const styles = StyleSheet.create({
   detailStyle: {
     fontSize: 20,
     fontFamily: "Griffy_400Regular",
+  },
+  readMoreView: {
+    marginTop: 2,
   },
 });
