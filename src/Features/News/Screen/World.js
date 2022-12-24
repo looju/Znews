@@ -6,7 +6,9 @@ import {
   Text,
   Image,
   TouchableOpacity,
+  Linking
 } from "react-native";
+import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import moment from "moment";
 import { Services } from "../../../Services/Services";
 
@@ -43,9 +45,14 @@ export const World = () => {
       <View style={styles.detailView}>
         <Text style={styles.detailStyle}>{item.title}</Text>
       </View>
-       <TouchableOpacity>
-        
-        </TouchableOpacity>
+      <TouchableOpacity onPress={()=>{
+        Linking.openURL(`${item.url}`)
+      }}>
+        <View style={styles.buttonLink}>
+          <Text style={styles.dateStyle}>Read more </Text>
+          <MaterialCommunityIcons name="newspaper" size={20}/>
+        </View>
+      </TouchableOpacity>
     </View>
   );
 
@@ -96,5 +103,9 @@ const styles = StyleSheet.create({
   },
   readMoreView: {
     marginTop: 2,
+  },
+  buttonLink: {
+   flexDirection:"row",
+    marginBottom: 10,
   },
 });

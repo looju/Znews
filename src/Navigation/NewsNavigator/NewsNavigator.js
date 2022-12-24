@@ -13,7 +13,7 @@ import {
   Griffy_400Regular,
   Tangerine_400Regular,
 } from "@expo-google-fonts/dev";
-import { color } from "react-native-reanimated";
+
 
 const Tab = createMaterialBottomTabNavigator();
 
